@@ -1,8 +1,12 @@
 #include<iostream>
 using namespace std;
-void keep_window_open(){char ch; cin>>ch;}
-void main()
+void keep_window_open()
 {
-    cout<<"hello world";
-    keep_window_open;
+	char ch;
+	cin >> ch;
+}
+int main()
+{
+	cout << "hello world"<<endl;
+	keep_window_open();
 }
