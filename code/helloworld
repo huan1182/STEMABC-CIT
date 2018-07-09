@@ -1,12 +1,15 @@
+/*
+  First program using C++
+*/
 #include<iostream>
 using namespace std;
-void keep_window_open()
+void keep_window_open()// to keep window open
 {
-	char ch;
-	cin >> ch;
+char ch;
+cin >> ch;
 }
 int main()
 {
-	cout << "hello world"<<endl;
-	keep_window_open();
+cout << "hello world"<<endl;
+keep_window_open();
 }
