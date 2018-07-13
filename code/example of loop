@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+void keep() { char c; cin >> c; }
+void main()
+{
+	int i = 0;
+	int a[23] = {};
+	for (i = 0; i<23; i++)
+	{
+		cout << a[i] <<"  index is: "<<i << endl;
+	}
+	cout << "the result of while loop" << endl;
+	i = 0;
+	while (i < 23)
+	{
+		cout << a[i] << "  index is: " << i << endl;
+		i++;
+	}
+
+	keep();
+}
