@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+void keep() { char c; cin >> c; }
+void main()
+{
+	int i = 0;
+	int a[10] = {1,2,3,4,5,6,7,8,9,10};
+	for (i = 0; i<10; i++)
+	{
+		cout << a[i]*a[i] << endl;
+	}
+	cout << "the result of while loop" << endl;
+	i = 0;
+	while (i < 10)
+	{
+		cout << a[i]*a[i] << i << endl;
+		i++;
+	}
+
+	keep();
+}
