@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void keep_open() { char ch; cin >> ch; }
+int compare(int x, int y,char symbol)
+{
+	switch (symbol)
+	{
+	case '>':
+	{
+		if (x > y) return x;
+		return y;
+	}
+	case '<':
+	{
+		if (x > y)return y;
+		return x;
+	}
+	}
+}
+int main()
+{
+	int x=2;
+	int y = 3;
+	char symbol = '<';
+	cout << compare(x, y, symbol);
+
+	keep_open();
+}
