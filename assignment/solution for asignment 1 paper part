@@ -1,0 +1,29 @@
+Problem 1
+(1) :1
+(2): 1 5
+(3): 4
+(4): 4
+(5): 5,9,9,18,0,1,0,2
+
+Problem 2:
+part I:
+(a): 2^7+2^4+2^3+2+1=155
+(b):9
+(c): 11000000111001
+(d):11110100001010100101
+ 
+ 
+ part II:
+(a) BC+A(!(AC))+B(!C+1)+A!C 
+    = BC+A(!A+!C)+B(!C+1) 
+    = BC+A!C+B!C+B 
+    =B+A!C+B
+    =B+A!C
+(b) A!BC+AB!C+ABC
+    =A!BC+AB!C+ABC+ABC
+     =AC+AB
+      =A(B+C)
+(c) (A+BC)(!B+C)(A+!B) 
+    = (A!B+AC+BC)(A+!B)
+     =A!B+AC+ABC+A!BC+0
+     =AC+A!B
