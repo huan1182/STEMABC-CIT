@@ -1,0 +1,77 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<cstdlib>
+#include<time.h>
+using namespace std;
+void keep_open() { char ch; cin >> ch; }
+void vectorsort(vector<int> number);
+void arraysort(int number[], int size);
+
+int main()
+{
+	vector<int> number;
+	int i;
+	srand(time(NULL));
+	cout << "randomvector:" << endl;
+	for (i = 0; i < 45; i++)
+	{
+		number.push_back(rand() % 100 + 1);
+		cout << number[i]<<endl;
+	}
+	cout << "sorted vector:" << endl;
+	vectorsort(number);
+	int number2[45] = {};
+	cout << "random array";
+	for (i = 0; i < 45; i++)
+	{
+		number2[i]=rand() % 100 + 1;
+		cout << number[i] << endl;
+	}
+	cout << "sorted array" << endl;
+	arraysort(number2,45);
+	
+	keep_open();
+}
+
+void vectorsort(vector<int> number)
+{
+	vector<int> a = number;
+	int n = a.size();
+	int i, j;
+	int temp;
+	for (i = 0; i < n; i++)
+	{
+		for (j = i; j < n; j++)
+		{
+			if (number[i] > number[j])
+			{
+				temp = number[i];
+				number[i] = number[j];
+				number[j] = temp;
+			}
+		}
+		cout << number[i]<<endl;
+	}
+}
+
+void arraysort(int number[], const int size)
+{
+	int i, j, n, temp;
+	n = size;
+	for(i=0;i<n;i++)
+	{
+		for (j = i; j < n; j++)
+		{
+			if (number[i] > number[j])
+			{
+				temp = number[i];
+				number[i] = number[j];
+				number[j] = temp;
+			}
+		}
+		cout << number[i]<<endl;
+	}
+
+
+}
