@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<cstdlib>
+using namespace std;
+void keep();
+struct Name_pair
+{
+	int age;
+	string name;
+};
+void add_pair(vector<Name_pair> a)
+{
+	Name_pair temp;//to store the data of new element
+	string key;
+	cout << "enter the name or enter exit to quit: "<<endl;
+	cin >> key;
+	while (key != "exit")//to judge if the process should end
+	{
+		a.push_back(temp);//after creating the new element,there's still sth to do in the loop
+	}
+}
+void sort(vector<Name_pair> a)// make use of your previoue lab
+{
+
+}
+void main()
+{
+	vector<Name_pair> test;
+	add_pair(test);
+	sort(test);
+	keep();
+}
