@@ -18,11 +18,15 @@ void add_pair(vector<Name_pair> a)
 	while (key != "exit")//to judge if the process should end
 	{
 		a.push_back(temp);//after creating the new element,there's still sth to do in the loop
+		key.clear();// clear the string before you update the key
 	}
 }
 void sort(vector<Name_pair> a)// make use of your previoue lab
 {
-
+       if(a[i].age>a[j].age)
+       {
+          // swap a[i]&a[j].
+       }
 }
 void main()
 {
