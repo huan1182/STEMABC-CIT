@@ -25,7 +25,7 @@ void insert_position(int pos, int value, node *head, node *tail)
 	{
 		pre = cur;
 		cur = cur->next;
-		if (cur->next == NULL)
+		if (cur == NULL)
 		{
 
 			// insert at the end and update the tail
