@@ -9,7 +9,7 @@ struct Name_pair
 	int age;
 	string name;
 };
-void add_pair(vector<Name_pair> a)
+void add_pair(vector<Name_pair> &a)//pass by reference
 {
 	Name_pair temp;//to store the data of new element
 	string key;
