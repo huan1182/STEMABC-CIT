@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+void keep() { char c; cin >> c; }
+struct node
+{
+	int data;
+	node *next;
+};
+void insert_position(int pos, int value, node *head, node *tail)
+{
+	node*temp=new node;
+	temp->data = value;
+	node *pre = NULL;
+	node *cur = head;
+
+	if (pos <= 0)
+	{
+		//insert at the start and change the head
+		return;
+	}
+	cur = head;
+	for (int i = 1; i<pos; i++)
+	{
+		pre = cur;
+		cur = cur->next;
+		if (cur->next == NULL)
+		{
+
+			// insert at the end and update the tail
+			return;
+		}
+	}
+	
+	pre->next = temp;
+	temp->next = cur;
+
+	
+}
