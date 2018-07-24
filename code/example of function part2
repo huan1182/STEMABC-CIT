@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+void keep();
+int add(int x, int y)//pass by value
+{
+	x = 3;
+	y = 4;
+	return x + y;
+}
+void add2(int &x, int&y)//pass by reference
+{
+	x *= 2;
+	y *= 3;
+}
+int divide(int a, int b = 2)// we set default value of b as 2
+{
+	int r;
+	r = a / b;
+	return (r);
+}
+
+void main()
+{
+	int x = 1, y = 2, z;
+	z = add(x, y);
+	cout << "pass by value: "<<"x= " << x << " , y= " << y<<" , z= "<<z  << endl;
+	add2(x, y);
+	cout << "pass by reference: "<<"x= " << x << " , y= " << y << endl;
+	int a = divide(8);
+	int b = divide(9, 3);
+	cout << "example of default value: a= divide(8): " << a<<endl;
+	cout << "example of default value: b=divide (9,3): " << b << endl;
+	keep();
+	
+}
+
+void keep() 
+{
+	char c; cin >> c;
+}
