@@ -1,0 +1,18 @@
+void judge(vector<int> a)
+{
+	vector<int>odd;
+	vector<int>even;
+	int i;// control the loop
+	int n = a.size();//get the size of your input
+	for (i = 0; i < n; i++)
+	{
+
+	}//insert the element of a to odd/even
+
+	cout << "the odd numbers of this vector are: " << endl;
+	int n1 = odd.size();//get the size of the vector odd you've created
+	int n2 = even.size();//get the size of the vector odd you've created
+	for ();//print out the element of odd
+	cout << "the odd numbers of this vector are: " << endl;
+	for ();//print out the element of even
+}
