@@ -1,3 +1,4 @@
+// this is the code of example for different form of constructor
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -6,7 +7,7 @@ class Rectangle
 {
 	int width, height;
 public:
-	Rectangle(int, int);//constructor no return type.
+	Rectangle(int, int);//a constructor has no return type.
 	Rectangle(int);//overloading constructor
 	
 	Rectangle();//default constructor
@@ -35,6 +36,16 @@ Rectangle::Rectangle()//default constructor
 	height = 1;
 }
 
+
+class Body {
+	Rectangle base;
+	double height;
+public:
+	Body(int a, double h):base(a), height(h) {}
+	Body(double h) :height(h) {};//if the object member not initialized after colon it'll call default constructor.
+	double volume() { return base.area() * height; }
+};
+
 int main()
 {
 	Rectangle rect0;//default calling
@@ -51,6 +62,10 @@ int main()
 	cout << "area for rect4: " << rect4.area() << endl;
 	cout << "area for rect5: " << rect5.area() << endl;
 	cout << "area for rect6: " << rect6.area() << endl;
+	Body body0{ 2.5 };
+	cout << "volume of body0: " << body0.volume()<<endl;
+	Body body1{3,2.5};
+	cout << "volume of body1: " << body1.volume() << endl;
 	keep();
 	return 0;
 }
