@@ -1,0 +1,56 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+void keep() { char ch; cin >> ch; }
+class Rectangle
+{
+	int width, height;
+public:
+	Rectangle(int, int);//constructor no return type.
+	Rectangle(int);//overloading constructor
+	
+	Rectangle();//default constructor
+	Rectangle(int x, int y, int z, int a) :width(a*x + y) // a mixed form of the constructor.
+	{
+		height = z; 
+	}
+	Rectangle(int x, int y, int z) :width(x + y), height{ x + z } {};// it can also use uniform initialization
+
+	int area() { return width*height; }// member function defined within the class.
+};
+
+Rectangle::Rectangle(int x, int y)// member function defined out of the class.
+{
+	width = x;//It can directly access the data member when you specified the class.
+	height = y;
+}
+Rectangle::Rectangle( int y)// member function defined out of the class.
+{
+	width = 2;//It can directly access the data member when you specified the class.
+	height = y;
+}
+Rectangle::Rectangle()//default constructor
+{
+	width = 1;
+	height = 1;
+}
+
+int main()
+{
+	Rectangle rect0;//default calling
+	Rectangle rect1(3,4);// functional form
+	Rectangle rect2{ 5,6 };//uniform initialization
+	Rectangle rect3 = 4;//single paramater can use = followed by a value
+	Rectangle rect4={ 6,7 };// uniform initialization can use = before the braces
+	Rectangle rect5{ 4,5,6,7 };
+	Rectangle rect6 = { 4,5,6 };
+	cout << "area for rect0: " << rect0.area() << endl;
+	cout << "area for rect1: " << rect1.area() << endl;
+	cout << "area for rect2: " << rect2.area() << endl;
+	cout << "area for rect3: " << rect3.area() << endl;
+	cout << "area for rect4: " << rect4.area() << endl;
+	cout << "area for rect5: " << rect5.area() << endl;
+	cout << "area for rect6: " << rect6.area() << endl;
+	keep();
+	return 0;
+}
