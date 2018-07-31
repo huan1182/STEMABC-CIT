@@ -1,0 +1,60 @@
+// overloading operators example
+#include <iostream>
+using namespace std;
+void keep() { char i; cin >> i; }
+class CVector {
+public:
+	int x, y;
+	CVector() {};
+	CVector(int a, int b) : x(a), y(b) {}// This is just a constructor mentioned on Monday
+	CVector operator + (const CVector&);// Define the behavior of +
+	CVector operator -(const CVector &);
+	CVector operator + (int);//overload the operator function
+};
+
+CVector CVector::operator+ (const CVector& param) {
+	CVector temp;
+	temp.x = x + param.x;
+	temp.y = y + param.y;
+	return temp;
+}
+CVector CVector::operator+ (int a)
+{
+	CVector temp;
+	temp.x = x + a;
+	temp.y = y + a;
+	return temp;
+}
+CVector CVector::operator -(const CVector &param)// Something that is tricky and allowed but not recommended
+{
+	CVector temp;
+	temp.x = x + param.x;
+	temp.y = y + param.y;
+	return temp;
+}
+CVector operator *(const CVector &param, int a)// operator overload out of the class as a non-member function, the first parameter is of proper type.
+{
+	CVector temp;
+	temp.x = param.x*a;
+	temp.y = param.y*a;
+	return temp;
+}
+
+int main() {
+	CVector foo(3, 1);
+	CVector bar(1, 2);
+	CVector result;
+	result = foo + bar;
+	cout << result.x << ',' << result.y << '\n';
+	result = result + 1;
+	cout << result.x << ',' << result.y << '\n';
+	//different ways of calling operator overload.
+	result = result.operator+(bar);
+	cout << result.x << ',' << result.y << '\n';
+	result = result.operator+(1);
+	cout << result.x << ',' << result.y << '\n';
+	result = result * 8;//calling a non member operator over load
+	cout << result.x << ',' << result.y << '\n';
+	keep();
+	return 0;
+}
