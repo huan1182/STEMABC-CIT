@@ -1,0 +1,26 @@
+// hint for your lab13
+#include <iostream>
+using namespace std;
+void keep() { char i; cin >> i; }
+using namespace std;
+
+class Date
+{
+	int year, month, day;
+public:
+	Date() { //your default constructor }
+	Date(int x, int y, int z)  {//the constructor in your lab};
+	int operator -(Date y);
+};
+int Date::operator - (Date y)
+{
+	int result;
+	//calculate the result.
+	return result;
+}
+
+
+int main() {
+	keep();
+	return 0;
+}
