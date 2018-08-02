@@ -12,13 +12,14 @@ public:
 
 void Rectangle::set_values(int x, int y)// member function defined out of the class
 {
-	if (x < 0)
+	
+	width = x;//It can directly access the data member when you specified the class
+	height = y;
+	if (width < 0||height<0)
 	{
 		throw runtime_error("invalid input");
 
 	}
-	width = x;//It can directly access the data member when you specified the class
-	height = y;
 	
 }
 
