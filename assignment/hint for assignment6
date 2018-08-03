@@ -1,0 +1,26 @@
+class Date// you should keep your original class, this code is just for reference
+{
+	int month,day,year;
+public:
+	Date operator+(int b);
+};
+int dayinthemonth(int month)
+{
+	bool longmonth, shortmonth, feb;
+	if (longmonth) return 31;
+	if (shortmonth) return 30;
+	if (feb) return 28;
+
+}
+Date Date::operator +( int b)
+{
+	Date temp;
+	while (b > dayinthemonth(temp.month))
+	{
+		b - dayinthemonth(temp.month);
+			temp.month++;
+	 }
+	temp.day + b;
+	// some extra work here
+	return temp;
+}
